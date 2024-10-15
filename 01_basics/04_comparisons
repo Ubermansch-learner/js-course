@@ -1,0 +1,27 @@
+console.log(2>=1);//true
+console.log(2<1);
+console.log(2==1);
+// will always consistent answer as both side same type are being checked
+//in other examples type may get convert into different type creating inconsistency in desired output 
+
+console.log("2" > 1);
+console.log("02" >1);
+
+
+console.log(null >0);
+console.log(null==0);
+console.log(null >=0);
+// equality check == and comparisons >,<,>=,<=
+//work different
+//comparisons convert null to a number, treating it as 0.
+//this is the reason why 3rd output i.e>=0 is true 
+
+console.log(undefined == 0);
+console.log(undefined >0);
+console.log(undefined < 0);
+//better to avoid this type as might create inconsistency in code
+
+
+//===   =>also checks data type along with value checking
+
+console.log("2"===2);
