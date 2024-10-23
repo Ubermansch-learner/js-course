@@ -69,3 +69,24 @@ form.addEventListener('submit', function (e) {
 
 
 ```
+
+## solution code
+## project 3 
+
+```javascript
+
+
+const clock = document.getElementById('clock');
+// const clock = document.querySelector('#clock')
+
+//setInterval(function(){} , 1000)// this is the syntax , 1000= 1s
+
+setInterval(function () {
+  //
+  let date = new Date();
+  // console.log(date.toLocaleTimeString());
+  clock.innerHTML = date.toLocaleTimeString();
+}, 2000);
+
+
+```
