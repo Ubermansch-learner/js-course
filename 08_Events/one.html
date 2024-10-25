@@ -5,23 +5,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body style ="background-color: #414141; color:aliceblue">
     <h2>Amazing image</h2>
     <div >
         <ul id="images">
-            <li><img width="200px"
-                 id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" 
-                 alt="photoshop"></li>
-            <li><img width="200px" 
-                id="japan" 
-                src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" 
-                alt=""></li>
-            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
-                 alt=""></li>
-            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
-            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
-            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+            <li>
+                <img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop">
+            </li>
+            <li>
+                <img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                 alt="">
+                </li>
+            <li>
+                <img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="">
+            </li>
+            <li>
+                <img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="">
+            </li>
+            <li>
+                <img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="">
+            </li>
+            <li>
+                <a style="color: aliceblue;" href="https://google.com" id="google">Google</a>
+            </li>
         </ul>
    </div>
+    
 </body>
+
+<script>
+//    document.getElementById('images').addEventListener('click', function (e) {
+//     console.log("clciked inside the ul");
+//  })
+
+// document.getElementById('owl').addEventListener('click', function (e) {
+//     console.log("owl clicked");
+//  })
+//  //if clicked on owl image then as per event bubbling = like bubble goes from down to up = here first owl clicked will be printed in the console and then clicked inside the ul will be printed
+
+ 
+//  document.getElementById('images').addEventListener('click', function (e) {
+//     console.log("clciked inside the ul");
+//  },true)
+
+// document.getElementById('owl').addEventListener('click', function (e) {
+//     console.log("owl clicked");
+//  },true)
+ //here true is mentioned in arguement so as per event capturing method = top to bottom will be printed on console
+
+
+//  document.getElementById('images').addEventListener('click', function (e) {
+//     console.log("clciked inside the ul");
+//  },false)
+
+// document.getElementById('owl').addEventListener('click', function (e) {
+//     console.log("owl clicked");
+//     e.stopPropagation();
+//     //will stop after showing owl clicked
+//  },false)
+
+//  document.getElementById('google').addEventListener('click',function(e){
+//               e.preventDefault();
+             
+//               console.log("clicked inside google");
+              
+//  })
+
+
+//removing li when you  click on it
+document.querySelector('#images').addEventListener('click',function(e){
+            //   console.log(e.target);
+             // console.log(e.target.parentNode);//parent node is ul
+             console.log(e.target.tagName);
+             if(e.target.tagName === 'IMG' ){//so that when we click on dot all images are not cleared off the screen
+              console.log(e.target.id);
+              
+              let removeIt = e.target.parentNode
+              removeIt.remove();
+             }
+
+            //   let removeIt = e.target.parentNode
+            //   removeIt.remove();
+           // removeIt.parentNode.removeChild(removeIt)    same as above 
+
+              
+})
+
+
+
+
+ 
+
+</script>
 </html>
+
+
+
+<!--
+
+
+//events in js are run sequentially bu there are exceptions
+
+    // document.getElementById('owl').onclick = function(){
+    //     alert("owl clicked")
+    // }     gives less features when use via this so not used generally
+    //attachEvent()
+//jQuery
+
+//events to be studied-
+    //type , timestamp, defaultPrevented, target, toElement , srcELEMENT , currentTarget, 
+    //clientX, clientY, screenX, screenY
+    //altkey, ctrlkey, shiftkey, keyCode - to check what is the writing speed , whether typed correctly 
+-->
+
+
+<!--
+
+//event propagation ->  2 contexts =event bubbling and event capturing
+//default of event propagation is false which is event bubbling
+
+
+document.getElementById('owl').addEventListener('click', function (e) {
+    console.log(e);
+ })
+
+
+-->
+
+
