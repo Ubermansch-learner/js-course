@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style ="background-color: #212121;">
+ 0	UNSENT	Client has been created. open() not called yet.
+1	OPENED	open() has been called.
+2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+3	LOADING	Downloading; responseText holds partial data.
+4	DONE	The operation is complete.
+</body> 
+<script>
+        
+         const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
+       const xhr =  new XMLHttpRequest();
+       xhr.open('GET',requestUrl)
+      xhr.onreadystatechange = function(){
+        console.log(xhr.readyState);
+        if(xhr.readyState===4){
+            const data = JSON.parse(this.responseText);
+          //JSON.parse() method in JavaScript converts a 
+          //JSON string to a JavaScript object, allowing you
+          // to access its properties easily.
+          //takes the JSON response text from the server (a string) and converts it into a JavaScript object so that properties like followers can be accessed directly.
+           
+          // JSON response is data sent by a server in JSON (JavaScript Object Notation) format as a response to an HTTP request.
+          // when you make an API call to a server, the server often responds with data in JSON format, which looks like a JavaScript object.
+          console.log(data.followers);
+            
+        }
+      
+      }
+
+     
+       xhr.send();
+
+
+
+
+
+
+    </script>
+
+</html>
+
+
+<!--
+
+The code initializes an HTTP request to GitHub’s API to retrieve
+data about the user "hiteshchoudhary." As the request progresses,
+it logs the current state. When the request is complete, it 
+parses the JSON response and logs the number of followers.
+
+-->
