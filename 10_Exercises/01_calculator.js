@@ -62,4 +62,31 @@ function faultycalculator(num1,num2,operation){
        console.log(`The answer is: ${result}`);
 
 
+       //another way to do 
+
+
+    let randomnumber=Math.random()
+    let a = prompt("enter first no")
+    let b = prompt("enter second no")
+    let c = prompt("enter operation")
+    
+    let obj ={
+      
+        "+":"-",
+        "*":"+",
+        "-":"/",
+        "/":"**"
+
+    }
+    if(randomnumber>0.1){
+        //correct
+        alert(`the result is ${eval(`${a} ${c} {b}`)}`)
+
+    }
+
+    else{
+        c=obj[c]
+        alert(`the result is ${eval(`${a} ${c} {b}`)}`)
+
+    }
 
