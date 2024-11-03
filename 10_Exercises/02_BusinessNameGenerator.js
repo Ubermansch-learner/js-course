@@ -20,7 +20,7 @@ let random1= Math.random();
 let word1;
 if(random1<1/3){
     word1="crazy";
-}else if(random1<2/3){
+}else if(random1<2/3 && random1>=1/3){
     word1="amazing";
 }else{
     word1="fire";
