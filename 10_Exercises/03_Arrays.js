@@ -78,4 +78,4 @@ const red = (a, b)=>{
     return a+b
 }
 
-console.log(arr2.reduce(red))
+console.log(arr2.reduce(red))//1+2=3,3+3=6,6+4=10,10+5=15,15+6=21
