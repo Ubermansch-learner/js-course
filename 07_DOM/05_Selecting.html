@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .shadow{
+            height:23px;
+            width:23px;
+            margin:23px;
+            padding:23px;
+            border:2px solid black
+
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+    <div class="shadow">tree 1</div>
+    <div class="shadow">tree 2</div>
+    <div class="shadow">tree 3</div>
+    <div class="shadow">tree 4</div>
+    <div class="shadow">tree 5</div>
+   </div>
+
+</body>
+<script>
+    document.getElementsByClassName("shadow").style.backgroundColor="blue";
+    document.querySelectorAll(".box")//returns nodelist ->cannot apply .style as that can be done for an element only and here we have a collection of elements
+    //so you have to use for loop 
+    document.querySelectorAll(".box").forEach(e =>{
+        e.style.backgroundColor="blue";
+    })
+    document.getElementsByTagName("div")
+</script>
+</html>
