@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Hey I am a box</div>
+    </div>
+</body>
+<script>
+    document.designMode="on"//u can change the content of wensite temporarily
+    let div=document.createElement("div");
+    div.innerHTML="I have been inserted <b>by me</b>"
+    div.setAttribute("class","created");
+    document.querySelector(".container").append(div)//.append adds that element at the bottom
+    document.querySelector(".container").before(div);
+
+
+
+    let cont=document.querySelector
+
+
+</script>
+</html>
